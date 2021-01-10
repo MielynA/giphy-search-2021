@@ -32,7 +32,7 @@ import Giphy from './Giphy';
     if(this.state.submittedInput !== ''){
       header = (<h4>Search result for <em>{this.state.submittedInput}</em>:</h4>);
     }
-    console.log(this.state.giphy)
+  
 
     const giphy = this.state.giphy.map((info, i) =>(
       <Giphy getinfo={info} key={i} />
