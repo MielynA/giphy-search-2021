@@ -1,6 +1,5 @@
 import React from 'react'; 
 
-
  const Giphy = props => {
    // console.log(props.getinfo.images.url)
      let src = props.getinfo.images["fixed_width"].url;
