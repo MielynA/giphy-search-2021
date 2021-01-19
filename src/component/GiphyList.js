@@ -56,9 +56,11 @@ export default class GiphyList extends React.Component {
     const giphy = this.state.giphy.map((info, i) => (
       <Giphy getinfo={info} key={i} />
     ));
-    // you could put this right in the code below instead of assigning it to a const. See below.
+    // You could put this right in the code below instead of assigning it to a const. See below.
     return (
       <div className="container">
+        {/* If you put this NavSearchBar in App.js above Giphy, it will extend the length
+        of the page because it'll be outside the bootstrap container class */}
         <NavSearchBar submitInput={this.submitInput} />
         {header}
         {/* You could also do: {this.state.submittedInput && <h4>Search result for {this.state.submittedInput}</h4>}
