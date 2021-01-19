@@ -1,6 +1,5 @@
 import React from "react";
 
-
 export default class NavSearchBar extends React.Component {
   constructor(props) {
     super(props);
@@ -10,20 +9,20 @@ export default class NavSearchBar extends React.Component {
   }
 
   handleChange = (e) => {
-  
+    console.log(e.target.value);
     this.setState = {
       inputText: e.target.value,
     };
   };
 
-  submitInputParent = e => { 
+  submitInputParent = (e) => {
     this.props.submitInput(this.setState.inputText);
     e.preventDefault();
-    console.log(this.props)
+    console.log(this.props);
     this.setState = {
-      inputText: ""
-    }
-  }
+      inputText: "",
+    };
+  };
 
   render() {
     return (

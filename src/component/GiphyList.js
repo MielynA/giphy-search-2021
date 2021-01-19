@@ -30,7 +30,7 @@ export default class GiphyList extends React.Component {
         let giphy = res.data.data;
         // Not crucial, but it might be more transparent to name this 'data' or 'giphyData'
         // so it's a bit more specific :)
-        this.setState({ giphy, submittedInput: inputText });
+        this.setState({ giphy: giphy, submittedInput: inputText });
         // Again totally not crucial, but a fun trick:
         // when you are setting state and the key is equal to the value (e.g., giphy: giphy),
         // you can just write giphy once:
