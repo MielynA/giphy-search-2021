@@ -1,5 +1,5 @@
 import React from "react";
-
+import {Link} from 'react-router-dom';
 
 export default class NavSearchBar extends React.Component {
   constructor(props) {
@@ -17,20 +17,22 @@ export default class NavSearchBar extends React.Component {
   };
 
   submitInputParent = e => { 
-    this.props.submitInput(this.setState.inputText);
     e.preventDefault();
+    this.props.submitInput(this.setState.inputText);
+  
     console.log(this.props)
     this.setState = {
       inputText: ""
     }
   }
-
+ 
   render() {
     return (
       <React.Fragment>
         <div className="container">
           <nav className="navbar navbar-light bg-light">
             <a className="navbar-brand">Navbar</a>
+            <Link className="navbar-brand nav-link" to='/favorites'>Fav</Link>
             <form className="form-inline" onSubmit={this.submitInputParent}>
               <input
                 className="form-control mr-sm-2"

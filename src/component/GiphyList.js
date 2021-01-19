@@ -15,6 +15,7 @@ import Giphy from './Giphy';
   
      submitInput = (inputText) => {
       let replacedInputText = inputText.split(' ').join('+');
+      console.log(inputText)
 
       let url = "http://api.giphy.com/v1/gifs/search?q=" + replacedInputText 
         +"&api_key=DSnJpitZhmQcDeM5vIVQEVjxEO81aOe0&limit=25";
@@ -27,12 +28,15 @@ import Giphy from './Giphy';
           console.log(error)
        })
      }
+     componentDidUpdate () {
+     
+     }
   render(){ 
     let header = "";
     if(this.state.submittedInput !== ''){
       header = (<h4>Search result for <em>{this.state.submittedInput}</em>:</h4>);
     }
-  
+    console.log(this.state.giphy)
 
     const giphy = this.state.giphy.map((info, i) =>(
       <Giphy getinfo={info} key={i} />
