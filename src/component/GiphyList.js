@@ -42,7 +42,7 @@ export default class GiphyList extends React.Component {
   };
 
   render() {
->>>>>>> 03f75fa5fce05ff70fa51658fe479681e4480310
+
     let header = "";
     if (this.state.submittedInput !== "") {
       header = (

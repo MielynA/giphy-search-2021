@@ -1,6 +1,8 @@
 import React from "react";
 import GiphyList from "./component/GiphyList";
 import NavSearchBar from "./component/NavSearchBar";
+import Home from './component/Home'; 
+import {HashRouter, Route, Switch} from 'react-router-dom';
 
 function App() {
   return (
@@ -11,7 +13,11 @@ function App() {
     // trying to return two components/elements from the App component. You would have to wrap these in something so that
     // App is returning just one component/element.
     // <div>
-    <GiphyList />
+    <HashRouter>
+    
+    <Route path='/' exact component={Home} />
+    <Route path='/' component={GiphyList} />
+    </HashRouter>
     // </div>
   );
 }
